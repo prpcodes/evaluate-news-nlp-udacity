@@ -4,24 +4,15 @@ function handleSubmit(event) {
     // check what text was put into the form field
     let formText = document.getElementById('url').value
     Client.checkForUrl(formText)
-
-    /*
-    console.log("::: Form Submitted :::")
-    fetch('http://localhost:8081/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
-    */
-
-   fetch('http://localhost:8081/article', {
-    method: "POST",
+ 
+    fetch('http://localhost:8081/analize', {
+        method: "POST",
         mode: "cors",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({ 
-            text: url 
+            text: formText 
         })
     })
     .then(res => res.json())
