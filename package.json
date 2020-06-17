@@ -14,9 +14,11 @@
   "description": "",
   "dependencies": {
     "aylien_textapi": "^0.7.0",
+    "babel-jest": "^26.0.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "node-mocks-http": "^1.8.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
