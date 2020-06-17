@@ -3,7 +3,7 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('url').value
-    Client.checkForUrl(formText)
+    Client.checkUrl(formText)
  
     fetch('http://localhost:8081/analize', {
         method: "POST",
