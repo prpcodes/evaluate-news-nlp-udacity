@@ -1,4 +1,4 @@
-import { checkForUrl } from './js/checkForUrl'
+import { checkUrl } from './js/checkUrl'
 import { handleSubmit } from './js/formHandler'
 
 import './styles/base.scss' 
@@ -8,6 +8,6 @@ import './styles/header.scss'
 import './styles/resets.scss' 
 
 export {
-    checkForUrl,
+    checkUrl,
     handleSubmit
 }
