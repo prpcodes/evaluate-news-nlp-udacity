@@ -1,12 +1,23 @@
-//reference https://dev.to/nedsoft/testing-nodejs-express-api-with-jest-and-supertest-1km6
-
-const request = require('supertest')
 const app = require('../src/server/index')
+const request = require("supertest");
+const httpMocks = require('node-mocks-http');
 
-
-describe("GET / ", () => {
-  test("It should respond with dist/index.html file & Status Code: 200", async () => {
-    const response = await request(app).get("/");
-    expect(response.statusCode).toBe(200);
-  });
+describe('POST /analyze', () => {
+    it('gets avalid URL and should respond with 200 from the API', async done => {
+        const next = jest.fn();
+        const req = httpMocks.createRequest({
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ 
+                text: "https://orf.at/stories/3169924/" 
+            })
+        });
+        const res = httpMocks.createResponse();
+        expect(res.statusCode).toBe(200);
+        
+        done();
+    });
 });
