@@ -2,9 +2,8 @@ const app = require('../src/server/index')
 const request = require("supertest");
 const httpMocks = require('node-mocks-http');
 
-describe('POST /analyze', () => {
+describe('Test: POST /analyze', () => {
     it('gets avalid URL and should respond with 200 from the API', async done => {
-        const next = jest.fn();
         const req = httpMocks.createRequest({
             method: "POST",
             mode: "cors",
