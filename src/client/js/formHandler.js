@@ -22,6 +22,9 @@ function handleSubmit(event) {
         document.getElementById('Subjectivity').innerHTML = res.subjectivity;
         document.getElementById('SubjectivityConfidence').innerHTML = res.subjectivity_confidence;
     })
+    .catch(function(error) {
+        alert(error);
+    });
 }
 
 export { handleSubmit }

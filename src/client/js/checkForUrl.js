@@ -4,7 +4,7 @@ function checkForUrl(inputText) {
 
 
     if(urlRegex.test(inputText)) {
-        alert("Success!")
+        console.log("Success!")
     } else {
         alert("Error! Entered string is not a valid URL.")
     }

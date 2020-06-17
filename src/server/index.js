@@ -2,7 +2,6 @@ const path = require('path')
 const express = require('express')
 const cors = require("cors") // import cors
 const aylien  = require('aylien_textapi');
-const WorkboxPlugin = require('workbox-webpack-plugin');
 const app = express()
 
 const bodyParser = require('body-parser')
@@ -23,8 +22,8 @@ const textapi = new aylien ({
 app.use(cors()) // Use it as the middleware
 app.use(express.static('dist'))
 
-
-// console.log(__dirname)
+//log directory to console
+console.log(__dirname)
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
